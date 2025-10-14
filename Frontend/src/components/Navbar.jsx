@@ -31,12 +31,12 @@ const Navbar = () => {
                 <p>Home</p>
                 <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
             </NavLink>
-            <NavLink to="#search" className="flex flex-col items-center gap-1">
+            <NavLink to="/search" className="flex flex-col items-center gap-1">
                 <FaSearch size={25}/>
                 <p>Search</p>
                 <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
             </NavLink>
-            <NavLink to="#profile" className="flex flex-col items-center gap-1">
+            <NavLink to="/profile" className="flex flex-col items-center gap-1">
                 <FaUserCircle size={25}/>
                 <p>Profile</p>
                 <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
@@ -58,13 +58,13 @@ const Navbar = () => {
 
                 {dropdownOpen && (
                     <div className="absolute right-0 mt-2 w-44 bg-white dark:bg-gray-700 text-gray-800 dark:text-white rounded-md shadow-lg py-2 z-50">
-                    <Link
+                    <NavLink
                         to="/profile"
                         className="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-600"
                         onClick={() => setDropdownOpen(false)}
                     >
                         My Profile
-                    </Link>
+                    </NavLink>
                     <button
                         className="w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-600"
                         onClick={() => {

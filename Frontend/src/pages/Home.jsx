@@ -45,10 +45,10 @@ const Home = () => {
   return (
     <div>
       {/* New Post Box */}
-      <div className='flex gap-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow mb-5'>
+      <div className='flex gap-3 p-4 bg-gray-100 rounded-lg shadow mb-5'>
         <img src={assets.profile} alt="Profile" className='w-10 h-10 rounded-full'/>
         <div className='flex-1 flex flex-col gap-2'>
-            <textarea className='w-full p-2 rounded-lg bg-gray-100 dark:bg-gray-700 resize-none focus:outline-none'
+            <textarea className='w-full p-2 rounded-lg bg-white resize-none focus:outline-none'
                 placeholder="Say Something..."
                 value={newPost}
                 onClick={(e) => setNewPost(e.target.value)}
@@ -63,12 +63,12 @@ const Home = () => {
       {/* Posts Feed */}
       <div className='space-y-4'>
         {posts.map((post) => (
-            <div key={post.id} className='bg-white dark:bg-gray-800 p-4 rounded-lg shadow'>
+            <div key={post.id} className='bg-gray-100 p-4 rounded-lg shadow'>
                 {/* Post Header */}
                 <div className='flex items-center gap-3 mb-2'>
                     <img src={post.profilePic} alt={post.username} className='w-10 h-10 rounded-full' />
                     <div>
-                        <p className='font-semibold'>{post.username}<span className="text-gray-500 dark:text-gray-400 font-normal">{post.handle} · {post.timestamp}</span></p>
+                        <p className='font-semibold'>{post.username}<span className="text-gray-500 ">{post.handle} · {post.timestamp}</span></p>
                     </div>
                 </div>
                 {/* Post Content */}
